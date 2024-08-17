@@ -72,12 +72,63 @@
             background-color: #007bff;
             color: #fff;
         }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .submit-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Your Cart</h1>
-        <div id="cart-items"></div>
+        <form id="cart-form">
+            <div id="cart-items"></div>
+            <div class="form-group">
+                <label for="customer-name">Name</label>
+                <input type="text" id="customer-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-address">Address</label>
+                <textarea id="customer-address" name="address" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
         <a href="index.html">Back to Shopping</a>
     </div>
 
@@ -90,7 +141,7 @@
             } else {
                 cartItemsDiv.innerHTML = '<ul>' + cart.map((item, index) => `
                     <li>
-                        ${item} <a class="remove-btn" onclick="removeItem(${index})">Remove</a>
+                        ${item.name} - $${item.price} <a class="remove-btn" aria-label="Remove ${item.name}" onclick="removeItem(${index})">Remove</a>
                     </li>
                 `).join('') + '</ul>';
             }
@@ -102,6 +153,17 @@
             localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
             loadCart(); // Reload the cart to reflect the changes
         }
+
+        document.getElementById('cart-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            let formData = new FormData(this);
+            let data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            console.log('Form Data:', data); // For testing; handle form submission here
+            // You might send data to a server or process it as needed
+        });
 
         window.onload = loadCart;
     </script>
