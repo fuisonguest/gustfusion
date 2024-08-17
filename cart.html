@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        #cart-items ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #cart-items li {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        #cart-items li:last-child {
+            border-bottom: none;
+        }
+        .remove-btn {
+            color: #d9534f;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #d9534f;
+            border-radius: 4px;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .remove-btn:hover {
+            background-color: #d9534f;
+            color: #fff;
+            text-decoration: none;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            background-color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <div id="cart-items"></div>
+        <a href="index.html">Back to Shopping</a>
+    </div>
+
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsDiv = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItemsDiv.innerHTML = '<ul>' + cart.map((item, index) => `
+                    <li>
+                        ${item} <a class="remove-btn" onclick="removeItem(${index})">Remove</a>
+                    </li>
+                `).join('') + '</ul>';
+            }
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove the item at the specified index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+            loadCart(); // Reload the cart to reflect the changes
+        }
+
+        window.onload = loadCart;
+    </script>
+</body>
+</html>
