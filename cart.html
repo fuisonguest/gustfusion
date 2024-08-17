@@ -3,77 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>Cart Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .product {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 300px;
-            margin: 20px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        .product h1 {
-            margin-top: 0;
-        }
-        .add-to-cart-btn,
-        .go-to-cart-btn {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 16px;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-        .add-to-cart-btn {
-            background-color: #007bff;
-        }
-        .add-to-cart-btn:hover {
-            background-color: #0056b3;
-        }
-        .go-to-cart-btn {
-            background-color: #28a745;
-            margin-top: 20px;
-            text-align: center;
-            display: block;
-        }
-        .go-to-cart-btn:hover {
-            background-color: #218838;
-        }
+        /* Your existing styles here */
     </style>
 </head>
 <body>
-    <div class="product">
-        <h1>Product 1</h1>
-        <p>Price: $10.00</p>
-        <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 1', price: 10.00})">Add to Cart</button>
+    <div class="container">
+        <h1>Your Cart</h1>
+        <form id="cart-form">
+            <div id="cart-items"></div>
+            <div class="form-group">
+                <label for="customer-name">Name</label>
+                <input type="text" id="customer-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-address">Address</label>
+                <textarea id="customer-address" name="address" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+        <a href="index.html">Back to Shopping</a>
     </div>
-    <div class="product">
-        <h1>Product 2</h1>
-        <p>Price: $20.00</p>
-        <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 2', price: 20.00})">Add to Cart</button>
-    </div>
-    <a href="cart.html" class="go-to-cart-btn">Go to Cart</a>
 
     <script>
-        function addToCart(item) {
+        const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzkZkRwwLWJAB6gTNx34TdwoMsd3ttg97A5SITMvjZO0WkndwORekBtmKlCPqkTUnxk6w/exec'; // Replace with your Google Apps Script web app URL
+
+        function loadCart() {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cart.push(item);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(item.name + ' added to cart!');
+            let cartItemsDiv = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cartItemsDiv.innerHTML = '<ul>' + cart.map((item, index) => `
+                    <li>
+                        ${item.name || 'Unnamed Item'} - $${item.price || '0.00'} <a class="remove-btn" aria-label="Remove ${item.name || 'item'}" onclick="removeItem(${index})">Remove</a>
+                    </li>
+                `).join('') + '</ul>';
+            }
         }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1); // Remove the item at the specified index
+            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+            loadCart(); // Reload the cart to reflect the changes
+        }
+
+        document.getElementById('cart-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let formData = new FormData(this);
+            let data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            
+            // Add cart data to form data
+            data.cart = cart;
+
+            // Send data to Google Sheets
+            fetch(SHEET_URL, {
+                method: 'POST',
+                contentType: 'application/json',
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log('Success:', result);
+                alert('Order submitted successfully!');
+                // Optionally clear the cart and form
+                localStorage.removeItem('cart');
+                loadCart();
+                document.getElementById('cart-form').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your order.');
+            });
+        });
+
+        window.onload = loadCart;
     </script>
 </body>
 </html>
