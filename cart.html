@@ -100,77 +100,44 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            loadCart();
+       function confirmOrder() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+        return;
+    }
 
-            document.getElementById('cart-items').addEventListener('click', function(e) {
-                if (e.target && e.target.matches('.remove-btn')) {
-                    let index = e.target.dataset.index;
-                    removeItem(index);
-                }
-            });
-        });
+    // Send data to Google Sheets
+    sendCartDataToSheet(cart);
 
-        function loadCart() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let cartItemsDiv = document.getElementById('cart-items');
-            if (cart.length === 0) {
-                cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
-            } else {
-                cartItemsDiv.innerHTML = '<ul>' + cart.map((item, index) => `
-                    <li>
-                        ${item} <a class="remove-btn" data-index="${index}">Remove</a>
-                    </li>
-                `).join('') + '</ul>';
-            }
+    // Optionally, clear the cart after confirmation
+    localStorage.removeItem('cart');
+    loadCart();
+}
+
+function sendCartDataToSheet(cart) {
+    let url = 'https://script.google.com/macros/s/AKfycbxdC1IoCkzz7ZhJpcRZ1wf_FCTTsT1EcDTg_SvgZDiUNDELwa9kwGY-MrgUpLO0xRz-qQ/exec'; // Replace with your Google Apps Script URL
+    let data = { items: cart.map(item => ({ itemName: item, quantity: 1 })) }; // Adjust as needed
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === 'success') {
+            console.log('Order confirmed and data sent to Google Sheets successfully');
+        } else {
+            console.error('Failed to send data to Google Sheets:', result.message);
         }
-
-        function removeItem(index) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            let item = cart[index];
-            cart.splice(index, 1); // Remove the item at the specified index
-            localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
-            loadCart(); // Reload the cart to reflect the changes
-        }
-
-        function confirmOrder() {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            if (cart.length === 0) {
-                alert('Your cart is empty.');
-                return;
-            }
-
-            // Send data to Google Sheets
-            sendCartDataToSheet(cart);
-
-            // Optionally, clear the cart after confirmation
-            localStorage.removeItem('cart');
-            loadCart();
-        }
-
-        function sendCartDataToSheet(cart) {
-            let url = 'https://script.google.com/macros/s/AKfycbwU9gAONbWWw-2zdm9rl6R4QT3iK4wmkll23TNdBm9b4A65Eb400mvEtmUEatAl_xDYAw/exec'; // Replace with your Google Apps Script URL
-            let data = cart.map(item => ({ itemName: item, quantity: 1 })); // Adjust quantity as needed
-
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ items: data })
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.status === 'success') {
-                    console.log('Order confirmed and data sent to Google Sheets successfully');
-                } else {
-                    console.error('Failed to send data to Google Sheets');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        }
-    </script>
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+   </script>
 </body>
 </html>
