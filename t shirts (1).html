@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>T-shirts</title>
+    <style>
+        .mySlides {display:none;}
+        </style>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,7 +59,57 @@
     </style>
 </head>
 <body>
+    <h1 align="center"><b>T-shirts</b></h1>
+    <div class="w3-content w3-section" style="max-width:200px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\Men_s_T-shirt_-_Green___XL-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\100__Cotton_Funny_Game_Print_round_Neck_Loose_Short_Sleeve_T-Shirts_-_Black___S-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\Guys_Dragon_Print_Tee-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\Cute_Cartoon_Astronaut_Print_Short_Sleeve_100_Cotton_Breathable_T-Shirts_-_Black___M-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\Mens_Astronaut_Shooting_Cartoon_Print_Crew_Neck_Short_Sleeve_T-Shirts_-_Grey___XL-removebg-preview.png" style="width:100%" height="300px">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+      
+      
     <div class="product">
+        <img src="C:\Users\vamsh\OneDrive\Desktop\fusion new work\fusion-wear1-master\images\anime collection\black clover\56233add-6362-4485-850a-c94d88023f1c.jpeg" width="200px" height="200">
+        <h1>black clover t shirt</h1>
+        <p>Price: ₹10.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'black clover', price:799})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <h1>Product 2</h1>
+        <p>Price: ₹20.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 2', price: 20.00})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vamsh\OneDrive\Desktop\fusion new work\fusion-wear1-master\images\anime collection\black clover\56233add-6362-4485-850a-c94d88023f1c.jpeg" width="200px" height="200">
+        <h1>Product 1</h1>
+        <p>Price: ₹10.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 1', price: 10.00})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <h1>Product 2</h1>
+        <p>Price: ₹20.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 2', price: 20.00})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="C:\Users\vamsh\OneDrive\Desktop\fusion new work\fusion-wear1-master\images\anime collection\black clover\56233add-6362-4485-850a-c94d88023f1c.jpeg" width="200px" height="200">
         <h1>Product 1</h1>
         <p>Price: ₹10.00</p>
         <button class="add-to-cart-btn" onclick="addToCart({name: 'Product 1', price: 10.00})">Add to Cart</button>
