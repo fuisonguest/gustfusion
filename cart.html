@@ -143,6 +143,10 @@
                 <input type="text" id="customer-name" name="name" required>
             </div>
             <div class="form-group">
+                <label for="customer-name">phone number</label>
+                <input type="text" id="customer-number" name="number" required>
+            </div>
+            <div class="form-group">
                 <label for="customer-email">Email</label>
                 <input type="email" id="customer-email" name="email" required>
             </div>
@@ -156,7 +160,7 @@
     </div>
 
     <script>
-        const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzkZkRwwLWJAB6gTNx34TdwoMsd3ttg97A5SITMvjZO0WkndwORekBtmKlCPqkTUnxk6w/exec'; // Replace with your Google Apps Script web app URL
+        const SHEET_URL = 'https://script.google.com/macros/s/AKfycby9UlxtDo4TD8qOz8a9lRd6LU5Xp3zOJCFxuufxzvVDE5-AN_r4eXWPluZ9jGcbbeBk/exec'; // Replace with your Google Apps Script web app URL
 
         function loadCart() {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
