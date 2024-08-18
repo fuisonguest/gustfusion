@@ -166,7 +166,7 @@
             } else {
                 cartItemsDiv.innerHTML = '<ul>' + cart.map((item, index) => `
                     <li>
-                        ${item.name || 'Unnamed Item'} - $${item.price || '0.00'} <a class="remove-btn" aria-label="Remove ${item.name || 'item'}" onclick="removeItem(${index})">Remove</a>
+                        ${item.name || 'Unnamed Item'} - ₹${item.price || '0.00'} <a class="remove-btn" aria-label="Remove ${item.name || 'item'}" onclick="removeItem(${index})">Remove</a>
                     </li>
                 `).join('') + '</ul>';
             }
