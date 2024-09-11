@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fusion wear black clover</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="IMG-20240813-WA0015.jpg" href=" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOq9EBZSMBuSRgrhfEiJJcdbQwgcxRiPQ",
+      authDomain: "fusion-wear-b7cdc.firebaseapp.com",
+      projectId: "fusion-wear-b7cdc",
+      storageBucket: "fusion-wear-b7cdc.appspot.com",
+      messagingSenderId: "156239565655",
+      appId: "1:156239565655:web:a7b97d349ec6503ad2a412",
+      measurementId: "G-RBR3YVCCXR"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>Anon</b> to get latest products and discount update.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div> 
+    </div>
+    </div>
+  
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Rose Gold Earrings
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p> 
+
+    </div> 
+
+  </div>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="cart.html"><button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">2</span>
+      </button></a>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <a href="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\catagoley.html"><button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button></a>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirts</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Women's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Mugs</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">printed-mugs</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Skins</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">laptop skins</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">mouse skins</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-category">
+          <a href="#" class="menu-title">Hot Offers</a>
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-c8ee0bbd-3062-4bfe-b218-61d9ca8ad719" data-elfsight-app-lazy></div>
+                  <div class="header-alert-news">          
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+              </div>
+
+            </div>
+
+          </div>
+         
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirts</title>
+    <style>
+        .mySlides {display:none;}
+        </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .product {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 300px;
+            margin: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .product h1 {
+            margin-top: 0;
+        }
+        .add-to-cart-btn,
+        .go-to-cart-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn {
+            background-color: #007bff;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+        .go-to-cart-btn {
+            background-color: #28a745;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+        }
+        .go-to-cart-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://static.wikia.nocookie.net/blackclover/images/a/a2/Black_Clover_title_art.png/revision/latest?cb=20150903080636" align="center" height="250" width="350">
+    <div class="w3-content w3-section" style="max-width:200px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\images collection\animecollection\astah (8).jpeg" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\images collection\animecollection\astah (2).jpeg" style="width:100%" height="300px">
+        <img class="mySlides" src="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\images collection\animecollection\astah (7).jpeg" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/Cute_Cartoon_Astronaut_Print_Short_Sleeve_100_Cotton_Breathable_T-Shirts_-_Black___M-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/\Mens_Astronaut_Shooting_Cartoon_Print_Crew_Neck_Short_Sleeve_T-Shirts_-_Grey___XL-removebg-preview.png" style="width:100%" height="300px">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+      
+      
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTlT_XHHQKqf1cBIpt2IHBxEI0gbw8WtQQzVBu1VA6YY61ulMm2IoyqD7XTbotkBao8XUfuvQKCC_FmlX5__cJ8K641BT1IxniY6j4bjpzuWuSJNdGJFYR-&usqp=CAE" width="200px" height="200">
+        <h1>Printed Black T-Shirt black clover</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Printed Black T-Shirt black clover', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR0lgvowOB7M06KQHBu0-9VLecaZSPNUNbaUr2c_XTiOoJjP06_glnzzao0F1f5ffBByrbQlCeU9XSbZZpyt8--0obKja7YqLQR27Gs6yos&usqp=CAE" width="200px" height="200">
+        <h1>Black Clover Oversized T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Asta Black Clover Anime Oversized T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.bewakoof.com/original/mad-over-print-men-s-black-anime-black-clover-graphic-printed-oversized-t-shirt-573588-1674550973-1.jpg" width="200px" height="200">
+        <h1>Five leaf clover black t shirt Oversized</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Five leaf clover black t shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61u-rdzPXCL._AC_UY1100_.jpg" width="200px" height="200">
+        <h1>Black Clover Black Bull Asta Cotton Printed</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Anime Black Clover Black Bull Asta Cotton Blend Printed Half Sleeve Round', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuqc4HA9xXuxGtrme2RbCD6A0rQ-TCAEWZpg&s" width="200px" height="200">
+        <h1>Black clover Yami Sukehiro T-shirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black clover Yami Sukehiro T-shirt Anime Manga Unisex T-Shirt ALL SIZES S to 5XL', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQePB_OzyCyStL0HXSF4Z2PrTPQe5qIY16-DAqWT3oI8_MYD6qs3ll9m8A4igfsrrZAFih_lSTQQj-oUhwCkaDt8kD9hGlAeLpgtHVVQwKOJMryG1h7JeZq&usqp=CAY" width="200px" height="200">
+        <h1>Asta Black Clover T-Shirt dark frindship</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Asta Black Clover T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ-1SW_2uEGjWtVVvfZQ062Um33y1iT7txXe0x_ZR32aPsZNRwRq0Z7YGXr1FxcMF3OMYsxo0EvuMlOuvJLi5A386JGF-0yr4193BXJ8u8&usqp=CAY" width="200px" height="200">
+        <h1>Asta Clover Blood - Black Clover white</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Asta Clover Blood - Black Clover white', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT31UI1aJxZaSKyconIV4bNv9UuTJzH-uVgZ3U3FkHxpsMx8hIb_olG2F3BpNTR1O3SURoFHEg8rrY8GWifGBVde4goAvpqkQiCVFfelGjH0T1vcdAyTvQB&usqp=CAY" width="200px" height="200">
+        <h1>Asta Clover Blood - Black Clover Black</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Asta Clover Blood - Black Clover Black', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnANPJaexZXGql4GmQeO82WRFCdO6KogE0ZJ0ppbbJ1GGIq_90Ej_6v5R_owQ2NeJiEn6KJWpL4iDkYB9kyaO-ELHhS8YMfpb_44TC3vs&usqp=CAY" width="200px" height="200">
+        <h1>Black Clover : Asta Oversized T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Clover : Asta Oversized T-Shirt ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5ZwLiEqC7NpbCKQ2OLQfaSoAQonhXQGO-yxSNm-stOpg1EyFb44v17vpGzfFUdxe4Td1jyEyaIYeU0dqNj_eZ5nNnRrd3LyNQWt3C3bivAWQalu6-MbIyKFE&usqp=CAY" width="200px" height="200">
+        <h1>Black Clover Yami Tee / Oversized</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Clover Yami Tee XXL / Oversized', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTyqYtnrwKEXT9x9YkXgCR6V-CNBU5hPCFy2lQI8n6bXzVtvRAS9Lzw-y8CmsCMn3njjaRM5VJSCHtgA31djy9Xq69xgTrCyK5b-wZTuhIMaQRyqulyqe05Zw&usqp=CAY" width="200px" height="200">
+        <h1>Black Clover Gold Tshirt Drop Shoulder </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Clover Gold Tshirt Drop Shoulder 240 GSM Extra large', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://www.swagshirts99.com/wp-content/uploads/2020/08/t15-8.jpg" width="200px" height="200">
+        <h1>asta transfomation T-shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Clover T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://harsido.com/cdn/shop/products/b_d5594a5e-c746-4d5d-9fce-9f64c26da7f5_960x.jpg?v=1629795887" width="200px" height="200">
+        <h1>Demon Asta - Black Clover t- shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Demon Asta - Black Clover', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRh0bREaoIcJaITku3N58aY9wCAuPW4jI5Mf5SF2K2X2BKSr8jy1J6PoBMssDVulAbNEdYa1QDVG39CnPS5xtYlCoRG5vn_5iEwDGWuai25lrIMItHXSwoU&usqp=CAE" width="200px" height="200">
+        <h1>Asta and Yuno - Black Clover Black</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Asta and Yuno - Black Clover Black / S', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ_rYO7lvmjaDlHQXfHvynFUwojwcjJyciZPtrLljqmi1VuvmpgPNkt-0TnFItML2xJUY5MncyY5bx85nHxNvjfj3ehlwWaDKcfY8d9OlCc_OCB01O1P12a&usqp=CAY" width="200px" height="200">
+        <h1>ASTA-BLACK CLOVER Maroon /</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'ASTA-BLACK CLOVER Maroon / XL', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTntKIKk3yjtP16pVATj_HutBExCaffLodGJxrEQEbT4bRGmydKawJHdY-M3LH_4B8ss-O5n-yt-rWMArCksOT6p3Lh5vIQ6Zpcds0deHnf8WI7tfu4BFgbFQ&usqp=CAE" width="200px" height="200">
+        <h1>Demon Asta - Black Clover t- shirt white</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Demon Asta - Black Clover White / XL', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQrOXuDhgK2pEcm4zAmCdiS8qDwGNrex2hmBdMUQLvWT93GRShCAKjCI7yjIBd_xuMTRMmV-SprPefDgsJyJWLWI8jWVOKGb7BokKc9l5U&usqp=CAY" width="200px" height="200">
+        <h1>Black Clover - Asta Cotton T-Shirt TS110</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Clover - Asta Cotton T-Shirt TS110', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ21--3TmJivEZTU-DOXCfvKayfMSn1uXAP5xaVNAXARemhqPIrcWNaGoJXXDEmuM51qttBwXfFaZuTNgDvUm6FIegzzSP3xOk6EYcc6AK9lsA9zDiI2CLCPLU&usqp=CAY" width="200px" height="200">
+        <h1>Black Bulls Tshirt | Yami Sukehiro</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Bulls Tshirt | Yami Sukehiro | The Unrealm Unisex / Navy Blue / M', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://www.emp-online.ch/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dwba28e932/images/5/5/4/3/554321.jpg?sw=350&sh=400&sm=fit&sfrm=png" width="200px" height="200">
+        <h1>Black Bulls best tro Printed t shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Black Bulls best tro', price:349})">Add to Cart</button>
+    </div>
+    <a href="cart.html" class="go-to-cart-btn">Go to Cart</a>
+
+    <script>
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item.name + ' added to cart!');
+        }
+    </script>
+</body>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
