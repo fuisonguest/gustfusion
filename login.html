@@ -91,7 +91,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
-        import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPhoneNumber, RecaptchaVerifier, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, signInWithPhoneNumber, RecaptchaVerifier, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
         
         const firebaseConfig = {
             apiKey: "AIzaSyDyIP75lsILha5uDiRP4StCU-RTmXTL2wc",
@@ -126,6 +126,7 @@
                         window.location.href = 'index.html';
                     })
                     .catch((error) => {
+                        console.error("Google Sign-In Error: ", error);
                         status.textContent = `Error: ${error.message}`;
                     })
                     .finally(() => {
@@ -146,6 +147,7 @@
                         window.location.href = 'index.html';
                     })
                     .catch((error) => {
+                        console.error("Email Sign-In Error: ", error);
                         status.textContent = `Error: ${error.message}`;
                     })
                     .finally(() => {
@@ -170,46 +172,7 @@
                         window.location.href = 'index.html';
                     })
                     .catch((error) => {
+                        console.error("Phone Sign-In Error: ", error);
                         status.textContent = `Error: ${error.message}`;
                     })
                     .finally(() => {
-                        loading.style.display = 'none';
-                    });
-            });
-
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    window.location.href = 'index.html';
-                }
-            });
-        });
-    </script>
-</head>
-<body>
-    <div class="login-container">
-        <h1>Login</h1>
-        
-        <!-- Google Sign-In Button -->
-        <button id="login-google" class="login-button">Login with Google</button>
-
-        <!-- Email/Password Sign-In Form -->
-        <div>
-            <h2>Email Login</h2>
-            <input id="email" type="email" class="form-input" placeholder="Email" />
-            <input id="password" type="password" class="form-input" placeholder="Password" />
-            <button id="login-email" class="login-button">Login with Email</button>
-        </div>
-
-        <!-- Phone Number Sign-In Form -->
-        <div>
-            <h2>Phone Number Login</h2>
-            <input id="phone" type="tel" class="form-input" placeholder="Phone Number" />
-            <div id="recaptcha-container"></div>
-            <button id="login-phone" class="login-button">Login with Phone Number</button>
-        </div>
-
-        <p id="status" class="status-message"></p>
-        <p id="loading" class="loading">Loading...</p>
-    </div>
-</body>
-</html>
