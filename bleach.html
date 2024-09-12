@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fusion wear black clover</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="IMG-20240813-WA0015.jpg" href=" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOq9EBZSMBuSRgrhfEiJJcdbQwgcxRiPQ",
+      authDomain: "fusion-wear-b7cdc.firebaseapp.com",
+      projectId: "fusion-wear-b7cdc",
+      storageBucket: "fusion-wear-b7cdc.appspot.com",
+      messagingSenderId: "156239565655",
+      appId: "1:156239565655:web:a7b97d349ec6503ad2a412",
+      measurementId: "G-RBR3YVCCXR"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>Anon</b> to get latest products and discount update.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div> 
+    </div>
+    </div>
+  
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./assets/images/products/jewellery-1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Rose Gold Earrings
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p> 
+
+    </div> 
+
+  </div>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="cart.html"><button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">cart</span>
+      </button></a>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <a href="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\catagoley.html"><button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button></a>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirts</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Women's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Mugs</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">printed-mugs</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Skins</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">laptop skins</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">mouse skins</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-category">
+          <a href="#" class="menu-title">Hot Offers</a>
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-c8ee0bbd-3062-4bfe-b218-61d9ca8ad719" data-elfsight-app-lazy></div>
+                  <div class="header-alert-news">          
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+              </div>
+
+            </div>
+
+          </div>
+         
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirts</title>
+    <style>
+        .mySlides {display:none;}
+        </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .product {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 300px;
+            margin: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .product h1 {
+            margin-top: 0;
+        }
+        .add-to-cart-btn,
+        .go-to-cart-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn {
+            background-color: #007bff;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+        .go-to-cart-btn {
+            background-color: #28a745;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+        }
+        .go-to-cart-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <img src="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\png-transparent-ichigo-kurosaki-hollow-bleach-drawing-visored-ichigo-kurosaki-emblem-logo-fictional-character-thumbnail-removebg-preview.png" width="340">
+    <div class="w3-content w3-section" style="max-width:200px">
+        <img class="mySlides" src="anime/t shirts/Men_s_T-shirt_-_Green___XL-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/100__Cotton_Funny_Game_Print_round_Neck_Loose_Short_Sleeve_T-Shirts_-_Black___S-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/Guys_Dragon_Print_Tee-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/Cute_Cartoon_Astronaut_Print_Short_Sleeve_100_Cotton_Breathable_T-Shirts_-_Black___M-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/\Mens_Astronaut_Shooting_Cartoon_Print_Crew_Neck_Short_Sleeve_T-Shirts_-_Grey___XL-removebg-preview.png" style="width:100%" height="300px">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+      
+      
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRdrxpimLNI5_WgqUfKx1P6Jc1xVa3hDyCscWvpNY5afZsQC4FBceV6FhIz3xRG7m39wWBki9IjirZPLSKGnDTf54LzLT1fd2jFz3xUFjrV&usqp=CAY" width="200px" height="200">
+        <h1>Ichigo Kurosaki - bleach bankai Hoddie</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Ichigo Kurosaki - bleach', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQqPTfcigVmH6vImuCWwoPLZ_7ZNwyjKkVh27tKWjJJlA3zRotZS_cA-CtyCTd80AvNwUvzspbsBgCpalK97Z6x4_QlLuDupXvvmRo5fnf2tdnT03an_svoVg&usqp=CAE" width="200px" height="200">
+        <h1>Bleach Toshiro Dragon Pullover Hoodie</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Toshiro Dragon Pullover Hoodie', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQtp_ykg5myGZJEa1MqsL2ySer-XPMzlMNIZ_9W_w_3UZHR_KtENIZaIBwuvtyO8WNkVF3nCzy0rf-qzOu_GHYa9b_pcxW5RQceagRqsF5AgRoafsvskpfc&usqp=CAE" width="200px" height="200">
+        <h1> Ulquiorra  Oversized Hoodie </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: ' Ulquiorra Cifer Oversized Hoodie ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTA6ShSneszUpYJ6CVTntkY3ILVHagrnKc0CLP4QqqBJAFAz5dn4VHRWju7nRNnHECaoLCh6USmKP5osg19SNHwVh5vp2BcIED7eZ0g6mBcAunYUYZpmwbg&usqp=CAc" width="200px" height="200">
+        <h1>  Bleach KENPACHI  Black  Hoodie</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Ulquiorra Cifer Oversized Hoodie M', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTYXJWOpUBW_BMnaQ2G0kl5F7SYkjFliAGJCz9YCTpwad4CG1NGP5Pir_bOXw3OLhW3rucXrGMW0cXkHfVUPWvsWqD0DO-_Zs00mAOOtum9&usqp=CAY" width="200px" height="200">
+        <h1>Bleach Hoodie - Ichigo Kurosaki  The Unrealm  </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Hoodie - Ichigo Kurosaki | The Unrealm White ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRxHYTwVo7rBS5ciI6Ib0MB4s3kR_WBQkdDRNOwHvxjZ4zpqvWdGuyKX1H3sJ-9Z8qt8Z_AbCKkV6vvUOixnt5tGnILC3PQdwEF8VNJRRpq1pf1l8s13U_BVA&usqp=CAE" width="200px" height="200">
+        <h1>Bleach hallow brothers black Hoddie  </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Merch Medium', price:349})">Add to Cart</button>
+    </div>
+  <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR265botg8UNHyx5w49nCwN4M6mE_fCQIiVqGXpNmovlHdZj8luZ8ZT4KxR9eoUmTkr_FnFqAawXyFOqh3nrDYMQtKs_O9p11h_Gb6QLbzY&usqp=CAY" width="200px" height="200">
+        <h1>Bleach Ichigo Hollow Oversized Tshirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Ichigo Hollow Oversized Tshirt White', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRjfBUfbCkeCeMnVB-0BcHXvx7m_JK_ge36PDadZYNIr3yGddpPebtfewiwXqfVZ44urfvNuxLLlz9LkY6LAAqLxhWm3ZT-gWRVEGBtdiM&usqp=CAY" width="200px" height="200">
+        <h1>Bleach Bankai Embroidered T-Shirt Lavender</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Bankai Embroidered T-Shirt Lavender', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQmoF-CJjFv7wV8ILgkyAihu5C-nBxIq4mLwFQrUBPf1i_hDGSAZZghLIwIBDvM2P40ae-lGDLBmUNIRrnVma8U-uGJu8UtaeLq4u0gFD0gGxq_q4y0qgqq&usqp=CAY" width="200px" height="200">
+        <h1> Ichigo Kurosaki Bleach Oversized  Half Sleeves </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Ichigo Kurosaki Bleach Oversized T-Shirt: Premium Cotton, Unisex, Half Sleeves for Men and Women', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTFM-PWRRaASJ2HnyNgpWxUV5QIQCesDqTD4A4GXXmtmAm9CPlbDcKDLnd_7I1d-3WUrfSvx6cWVwZDCf_E1hXB8A4GZiJuWSUcCp0_1iIcsghyFtJOY5nG&usqp=CAY" width="200px" height="200">
+        <h1>Bleach T-shirt - Shop Ichigo Bleach T shirt Online </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach T-shirt - Shop Ichigo Bleach T shirt Online ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSr7iC7GUPTd6g-axYDGdsVRQlK-js0mz7j3P-IK1PdNTwJbM_L2rT9_dKA-4Q5N23dPShPZU2FiFCchA0RXlQUfQstq4UFSxMYHpbF_k7oGsuHGVIVBVf4&usqp=CAY" width="200px" height="200">
+        <h1>Bleach - Oversized T-Shirt White  Oversized</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach - Oversized T-Shirt White / M / Oversized', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSOZGzv043G9e6K_Dn6vvpGDLg0nxUXXyXeAwrGLNthFHslMilBedt80GTkJ2Hz4xr0IGgBm9HtIN2Y--DkDowDO27reejrBv7yvgewYVg&usqp=CAY" width="200px" height="200">
+        <h1>Bleach  Byakuya Kuchiki With Broken Sword Printed Tshirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Anime Byakuya Kuchiki With Broken Sword Printed Tshirt For Men', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSecny2Jl2zxACz85yaxKSRBcKj0BxUbhlDzp9bx_hiGGBk51nQ_Nro0fQttAkhbh1tQQFqY2480hSz3Z0Xf8-9yASOoiPFYmfTin03KYIr&usqp=CAY" width="200px" height="200">
+        <h1>Bleach-Ichigo hallow Oversized T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach-Ichigo-tybw-horn-hollow - Oversized T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTGWCfY0Gu11hLeYcGZdrX5Z-YTrIj6qxHTRsTHjdKzPV_UDBOCeE54tg--EJZxFMONYkFvQuByyAtUXhmSkS4vOyzD-E3YA9yjJYfVHcV0wdIHv0gw6JhkKw&usqp=CAY" width="200px" height="200">
+        <h1>Bleach: Shinji Hirako (Oversized T-Shirt)</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach: Shinji Hirako (Oversized T-Shirt)', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQd4fDoOvUr9srAIxjffktlfdCmR8_THPoJOtQOo60h0hZnxOeNmU1DP-woe8plJ-df9pCR6ps-EClApnUPzAsltLjIxZaDyk3YwlDe6XWmiWyhJiYvtareNg&usqp=CAE" width="200px" height="200">
+        <h1>Bleach Ichigo Hood Sweatshirt | Ubuy</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Ichigo Hood Sweatshirt | Ubuy', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTZFJdFHjCXVTDbf0yGnwbZVuX8XoeAU8irYGI1wQ_SgGcEhUge2eDR9WW30xilV6WfH9nYjNdUsCtXYQym7DjHYrwJggJeq9uWfJSZKpWUzbSqZRZzfkFa&usqp=CAY" width="200px" height="200">
+        <h1>Bleach Ichigo Kurosaki Oversized T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Ichigo Kurosaki Oversized T-Shirt', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQqLtF5IfioJQz6S30fWtFs1U9nqb-Skdezxbhn2eq33LT0IjkGA8XnaBPYVWkRuvZtk4sC9XrluPE-Q22_pevIIjE7WAlkgOnFAPFfMSD9&usqp=CAY" width="200px" height="200">
+        <h1>Bleach Hollow T-shirt - Masacio White </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Hollow T-shirt - Masacio White ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT_KDjYwitZmVj5bA3YxH5fN4GUPqtYUgIajlJ8T0Czb9mbRn-i08mie7_i7hAjqVCTTvo9oRBUGeujl_INNAJwmsFYBdwNWJ7e3zp4JwpTNYbrNpWCpu2T&usqp=CAY" width="200px" height="200">
+        <h1>Bleach black Ichigo Mask T-Shirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Bleach Ichigo Mask T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRzYh08UtLmPo9mRXdyOoV5xwTrmJqHfqlVqUpo3AzHB_-Geu9uIGI4AYAfhvUoIJcWhCPeV2Ppz1UugAFuH4Fba2UA8SZfeJz6a5FgBHziCBET8OLoooIWZA&usqp=CAE" width="200px" height="200">
+        <h1> Bleach Hollow Mask Ichigo  Hoodie</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'crazymonk Bleach Hollow Mask Ichigo Kurosaki  Hoodie', price:349})">Add to Cart</button>
+    </div>
+    <a href="cart.html" class="go-to-cart-btn">Go to Cart</a>
+
+    <script>
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item.name + ' added to cart!');
+        }
+    </script>
+</body>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
