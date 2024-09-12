@@ -39,6 +39,8 @@
                     .then((result) => {
                         const user = result.user;
                         status.textContent = `Welcome, ${user.displayName}!`;
+                        // Redirect to the index page after successful login
+                        window.location.href = 'index.html'; // Change this to your desired URL
                     })
                     .catch((error) => {
                         status.textContent = `Error: ${error.message}`;
@@ -48,7 +50,8 @@
             // Monitor authentication state
             onAuthStateChanged(auth, (user) => {
                 if (user) {
-                    status.textContent = `Logged in as ${user.displayName}`;
+                    // Redirect to the index page if user is already logged in
+                    window.location.href = 'index.html'; // Change this to your desired URL
                 } else {
                     status.textContent = 'Not logged in';
                 }
@@ -62,3 +65,4 @@
     <p id="status"></p>
 </body>
 </html>
+
