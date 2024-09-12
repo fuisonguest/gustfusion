@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fusion wear black clover</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="IMG-20240813-WA0015.jpg" href=" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOq9EBZSMBuSRgrhfEiJJcdbQwgcxRiPQ",
+      authDomain: "fusion-wear-b7cdc.firebaseapp.com",
+      projectId: "fusion-wear-b7cdc",
+      storageBucket: "fusion-wear-b7cdc.appspot.com",
+      messagingSenderId: "156239565655",
+      appId: "1:156239565655:web:a7b97d349ec6503ad2a412",
+      measurementId: "G-RBR3YVCCXR"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="./assets/images/newsletter.png" alt="subscribe newsletter" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>Anon</b> to get latest products and discount update.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div> 
+    </div>
+    </div>
+  
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS7L8ZF85c3GjH4BbxzG-iIiiofJ33hhFaSyizyzRF2DBq5-qmd5B1bQCtX2t5Sh41HCO-bVKlFwM8sfGZb5sv4OuJJQqm0f9DU4OvTTZ4&usqp=CAE" alt="ani image" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        HOT Offers
+      </p>
+
+      <p class="toast-title">
+        buy 3 Wanted Poster Printed T-shirts get 1 free
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p> 
+
+    </div> 
+
+  </div>
+
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="cart.html"><button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">cart</span>
+      </button></a>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <a href="C:\Users\vamsh\Downloads\fwnewwork\fusion-wear1-master\assets\catagoley.html"><button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button></a>
+
+    </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirts</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Women's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Hoddies</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="t shirts (1).html" class="submenu-title">T-shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Mugs</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">printed-mugs</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">customise</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Skins</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">laptop skins</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">mouse skins</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-category">
+          <a href="#" class="menu-title">Hot Offers</a>
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+          <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-c8ee0bbd-3062-4bfe-b218-61d9ca8ad719" data-elfsight-app-lazy></div>
+                  <div class="header-alert-news">          
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+              </div>
+
+            </div>
+
+          </div>
+         
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirts</title>
+    <style>
+        .mySlides {display:none;}
+        </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .product {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 300px;
+            margin: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .product h1 {
+            margin-top: 0;
+        }
+        .add-to-cart-btn,
+        .go-to-cart-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart-btn {
+            background-color: #007bff;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #0056b3;
+        }
+        .go-to-cart-btn {
+            background-color: #28a745;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+        }
+        .go-to-cart-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://pngimg.com/d/naruto_PNG45.png" width="340">
+    <div class="w3-content w3-section" style="max-width:200px">
+        <img class="mySlides" src="anime/t shirts/Men_s_T-shirt_-_Green___XL-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/100__Cotton_Funny_Game_Print_round_Neck_Loose_Short_Sleeve_T-Shirts_-_Black___S-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/Guys_Dragon_Print_Tee-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/Cute_Cartoon_Astronaut_Print_Short_Sleeve_100_Cotton_Breathable_T-Shirts_-_Black___M-removebg-preview.png" style="width:100%" height="300px">
+        <img class="mySlides" src="anime/t shirts/\Mens_Astronaut_Shooting_Cartoon_Print_Crew_Neck_Short_Sleeve_T-Shirts_-_Grey___XL-removebg-preview.png" style="width:100%" height="300px">
+      </div>
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+      
+      
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRf0GDqBsFEX6fC_knxtNVG_c-XxGIPj-AUg&s" width="200px" height="200">
+        <h1>Naruto itachi uchiha t shirts for men half sleeves round</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto itachi uchiha t shirts for men half sleeves round', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKEBgl1617n69lG-iW_WyZZLGcd7azf4fKNBqySX0vkIr_zfoO7_3USv_&s=10" width="200px" height="200">
+        <h1>Naruto Anime Printed Oversized Fit T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto Anime Printed Oversized Fit T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmXAkWrFWXgJSe4HoGkQXJa_-2GCsBf5HUktXyiyRXUafm0R2StnT37rQ&s=10" width="200px" height="200">
+        <h1> Anime t Shirt for Men Oversized fit Naruto </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: ' Anime t Shirt for Men Oversized fit Naruto', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSceuWO28A_bi8QSe5V6-ADnpN5NiKSthslc2WkUklfbaqKMqyTKGUmL-&s=10" width="200px" height="200">
+        <h1>Free Authority Printed, Typography Black T-Shirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Free Authority Printed, Typography Men Round Neck Black T-Shirt ...', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTardYJR6U52TQlbiRCrpwkzGzU41VGvhrZ47QMSS8mcqEMQDkeAPU73sKr&s=10" width="200px" height="200">
+        <h1>Naruto Animal Oversized black T-Shirt for Men S</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto Animal Oversized T-Shirt for Men ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdG_6JuIGrEbp6YsZnb9s1ABE_XXu5stvy5Zu001-jgJPhF2UHoIV41mXy&s=10" width="200px" height="200">
+        <h1> Women Naruto Printed purple color T-shirt Online  </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Buy Women Naruto Printed Cotton T-shirt Online at ', price:349})">Add to Cart</button>
+    </div>
+  <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaKDtjS1Zyf55_nw1cyHF98OjZr18T5L0G_Q&usqp=CAU" width="200px" height="200">
+        <h1>Obito Uchiha | Naruto Unisex Oversized black T-Shirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Obito Uchiha | Naruto Unisex Oversized T-Shirt S', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhBm-MhaHYiDxCRtwQshOprjJeK-c_9Azn4lVheuDeNHhIjPDGW9cQgeNd&s=10" width="200px" height="200">
+        <h1>uzumaki Naruto anime -Oversized black  T shirt anime </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto - Oversized T shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28X6rgTG7wlKctBOJELlb9ZvgcrCNpGSEYg&usqp=CAU" width="200px" height="200">
+        <h1> Naruto Kurama White Hoodie Trendy Stylish Unisex</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Buy Koverify Naruto Kurama White Hoodie Trendy Stylish Unisex', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThTnRtH61R2CZgPnO7ZOTcfdBkKtkXUNW3jw&usqp=CAU" width="200px" height="200">
+        <h1>Men's Anime : Naruto Oversized Hoodie </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Mens Anime : Naruto Oversized Hoodie', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs3iw3DQFlj6TlhMy4MV_DWM5jSSsC2g8soQ&s" width="200px" height="200">
+        <h1>fusion wear Naruto Ninetails Anime white Hoodie</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'CRAZYMONK Naruto Ninetails Anime Hoodie', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240313/6E0Q/65f1bcc405ac7d77bbb0cc79/-473Wx593H-443027676-beige-MODEL3.jpg" width="200px" height="200">
+        <h1>ALTHEORY Naruto Back Print T-Shirt For Men (Beige)</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'ALTHEORY Naruto Back Print T-Shirt For Men (Beige, ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/610wN-j-fBL._SY741_.jpg" width="200px" height="200">
+        <h1>Round Neck half sleeve Shippuden ANIME printed Tshirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Round Neck half sleeve Shippuden ANIME Character printed Tshirt for Boys and Girls', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCqVUHp-UJtpetdC_jck49T8q0IFBt2HKw48smMS427vbCXYbnnENNz5MF&s=10" width="200px" height="200">
+        <h1>Naruto uzumaki Printed T-Shirt For Unisex white color black print</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto Printed T-Shirt For Unisex - ', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfblGg5X_BA7m1yV8reJt2xEduAQs9wyr-slszAFxTXGh3Q3A2Z8doMf_S&s=10" width="200px" height="200">
+        <h1>YOURTURN NARUTO CREW RELAXED BACK PRINT UNISEX - Sweatshirt ...</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'YOURTURN NARUTO CREW RELAXED BACK PRINT UNISEX - Sweatshir', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Q9QrqY2xxz_PlicdmXhZiR0V428atlJmGMO2fjgoA2yEcVyAG_3pU49y&s=10" width="200px" height="200">
+        <h1>Naruto Shippuden Kakashi Hatake Graphic Men's Black T-shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Naruto Shippuden Kakashi Hatake Graphic Men's Black T-shirt : Target', price:349})">Add to Cart</button>
+    </div>
+   <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSBpcsG9REopBbDoX1ULF8VE9thic-1Zx3zw&s" width="200px" height="200">
+        <h1>Gara Of The Sand Oversize T-shirt naruto anime</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Gara Of The Sand Oversize T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71fRwt0j6XL._SX679_.jpg" width="200px" height="200">
+        <h1>Anime Printed Naruto Sasuke Oversized T-Shirt</h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Fans Army Mens Anime Printed Naruto Sasuke Chidori Oversized T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61mMAlM13pL._SX679_.jpg" width="200px" height="200">
+        <h1>Fusion wear Men's Anime Printed Itachi Uchiha T-Shirt </h1>
+        <p>Price: ₹349.00</p>
+        <button class="add-to-cart-btn" onclick="addToCart({name: 'Fans Army Mens Anime Printed Itachi Uchiha T-Shirt', price:349})">Add to Cart</button>
+    </div>
+    <a href="cart.html" class="go-to-cart-btn">Go to Cart</a>
+
+    <script>
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item.name + ' added to cart!');
+        }
+    </script>
+</body>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
