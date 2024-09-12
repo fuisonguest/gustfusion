@@ -176,3 +176,30 @@
                         status.textContent = `Error: ${error.message}`;
                     })
                     .finally(() => {
+                        loading.style.display = 'none';
+                    });
+            });
+
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <button id="login-google" class="login-button">Login with Google</button>
+        <input type="email" id="email" class="form-input" placeholder="Email" />
+        <input type="password" id="password" class="form-input" placeholder="Password" />
+        <button id="login-email" class="login-button">Login with Email</button>
+        <input type="tel" id="phone" class="form-input" placeholder="Phone number (e.g., +1234567890)" />
+        <button id="login-phone" class="login-button">Login with Phone</button>
+        <div id="recaptcha-container"></div>
+        <p id="status" class="status-message"></p>
+        <p id="loading" class="loading">Loading...</p>
+    </div>
+</body>
+</html>
