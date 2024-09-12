@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* You can adjust the layout to fit your existing content */
+        }
+
+        /* User Name Display Styles */
+        .user-name-container {
+            position: fixed; /* Positioned fixed to stay in place */
+            top: 20px; /* Distance from the top */
+            right: 20px; /* Distance from the right */
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Ensure other content of the page does not overlap */
+        .main-content {
+            /* Add styles for your main content here */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <!-- Your main page content here -->
+        <h1>Welcome to the Index Page</h1>
+        <p>This is where your main content goes.</p>
+    </div>
+
+    <!-- User name display section -->
+    <div class="user-name-container">
+        <p id="userName">Hello, Guest!</p>
+    </div>
+
+    <script type="module">
+        import { getAuth } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+        
+        const auth = getAuth();
+        const userNameElement = document.getElementById('userName');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userName = localStorage.getItem('userName');
+
+            if (userName) {
+                userNameElement.textContent = `Hello, ${userName}!`;
+            } else {
+                userNameElement.textContent = 'Hello, Guest!';
+            }
+        });
+    </script>
+</body>
+</html>
