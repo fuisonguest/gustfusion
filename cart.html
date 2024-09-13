@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
+            background-color:white;
             color: #333;
         }
 
@@ -137,14 +137,14 @@
     <div class="container">
         <h1>Your Cart</h1>
         <form id="cart-form">
-            <div id="cart-items"></div>
+            <div id="cart-items" aria-live="polite"></div>
             <div class="form-group">
                 <label for="customer-name">Name</label>
                 <input type="text" id="customer-name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="customer-name">phone number</label>
-                <input type="text" id="customer-number" name="number" required>
+                <label for="customer-number">Phone Number</label>
+                <input type="text" id="customer-number" name="number" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
             </div>
             <div class="form-group">
                 <label for="customer-email">Email</label>
@@ -206,10 +206,12 @@
             .then(result => {
                 console.log('Success:', result);
                 alert('Order submitted successfully!');
-                // Optionally clear the cart and form
+                // Save the cart items to localStorage
+                localStorage.setItem('orderData', JSON.stringify(cart));
+                // Clear the cart and redirect to the order summary page
                 localStorage.removeItem('cart');
-                loadCart();
                 document.getElementById('cart-form').reset();
+                window.location.href = 'order-summary.html';
             })
             .catch(error => {
                 console.error('Error:', error);
