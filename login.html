@@ -169,6 +169,13 @@
         const analytics = getAnalytics(app);
         const auth = getAuth(app);
 
+        // Check if user is already authenticated
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                window.location.href = 'index.html'; // Redirect to index.html if user is already logged in
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('signUp').addEventListener('click', () => {
                 const email = document.getElementById('email').value;
@@ -184,6 +191,7 @@
                         const user = userCredential.user;
                         console.log('User signed up:', user);
                         alert('User signed up successfully');
+                        localStorage.setItem('loggedIn', 'true'); // Store login state
                         window.location.href = 'index.html'; // Redirect to index.html
                     })
                     .catch((error) => {
@@ -206,6 +214,7 @@
                         const user = userCredential.user;
                         console.log('User signed in:', user);
                         alert('User signed in successfully');
+                        localStorage.setItem('loggedIn', 'true'); // Store login state
                         window.location.href = 'index.html'; // Redirect to index.html
                     })
                     .catch((error) => {
@@ -242,6 +251,7 @@
                         const user = result.user;
                         console.log('User signed in with Google:', user);
                         alert('User signed in with Google: ' + user.displayName);
+                        localStorage.setItem('loggedIn', 'true'); // Store login state
                         window.location.href = 'index.html'; // Redirect to index.html
                     })
                     .catch((error) => {
